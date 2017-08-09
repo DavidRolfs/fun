@@ -1,0 +1,27 @@
+﻿
+@model IEnumerable<FRPG.Models.Player>
+
+<h2>Here is your character, @User.Identity.Name</h2>
+<hr />
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var listItem in Model)
+        {
+            <li>Name: @Html.DisplayFor(modelPlayer => listItem.Name)</li>
+            <li>Image Path: @Html.DisplayFor(modelPlayer => listItem.ImagePath)</li>
+            <li>ImageToByte: @Html.DisplayFor(modelPlayer => listItem.ImageToByte)</li>
+            <li>Bio: @Html.DisplayFor(modelPlayer => listItem.Bio)</li>
+            <li>Age: @Html.DisplayFor(modelPlayer => listItem.Age)</li>
+            <li>@Html.ActionLink("Edit", "Edit", new { id = listItem.Id })</li>
+            <li>@Html.ActionLink("Delete", "Delete", new { id = listItem.Id })</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No players have been added yet!</p>
+}
+
+@Html.ActionLink("Create new", "Create")

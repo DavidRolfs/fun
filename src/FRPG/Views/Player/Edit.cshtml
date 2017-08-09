@@ -1,0 +1,28 @@
+﻿@model FRPG.Models.Player
+
+
+    <h2>Edit</h2>
+    <hr />
+    <h4>Edit this Player: @Html.DisplayFor(model => model.Name)</h4>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.Id)
+
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
+
+        @Html.LabelFor(model => model.ImagePath)
+        @Html.EditorFor(model => model.ImagePath)
+
+        @Html.LabelFor(model => model.ImageToByte)
+        @Html.EditorFor(model => model.ImageToByte)
+
+        @Html.LabelFor(model => model.Bio)
+        @Html.EditorFor(model => model.Bio)
+
+        @Html.LabelFor(model => model.Age)
+        @Html.EditorFor(model => model.Age)
+
+        <input type="submit" value="Save" class="btn btn-default" />
+    }
+    @Html.ActionLink("Back to Player", "Index", "Player")
