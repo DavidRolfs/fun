@@ -204,10 +204,8 @@ c:\Users\epicodus\documents\visual studio 2015\Projects\FRPG\src\FRPG\Program.cs
 c:\Users\epicodus\documents\visual studio 2015\Projects\FRPG\src\FRPG\Startup.cs
 c:\Users\epicodus\documents\visual studio 2015\Projects\FRPG\src\FRPG\Controllers\AccountController.cs
 c:\Users\epicodus\documents\visual studio 2015\Projects\FRPG\src\FRPG\Controllers\PlayerController.cs
-c:\Users\epicodus\documents\visual studio 2015\Projects\FRPG\src\FRPG\Migrations\20170809155424_Initial.cs
-c:\Users\epicodus\documents\visual studio 2015\Projects\FRPG\src\FRPG\Migrations\20170809155424_Initial.Designer.cs
-c:\Users\epicodus\documents\visual studio 2015\Projects\FRPG\src\FRPG\Migrations\20170809164910_Player.cs
-c:\Users\epicodus\documents\visual studio 2015\Projects\FRPG\src\FRPG\Migrations\20170809164910_Player.Designer.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\FRPG\src\FRPG\Migrations\20170809232312_Initial_Again.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\FRPG\src\FRPG\Migrations\20170809232312_Initial_Again.Designer.cs
 c:\Users\epicodus\documents\visual studio 2015\Projects\FRPG\src\FRPG\Migrations\ApplicationDbContextModelSnapshot.cs
 c:\Users\epicodus\documents\visual studio 2015\Projects\FRPG\src\FRPG\Models\ApplicationDbContext.cs
 c:\Users\epicodus\documents\visual studio 2015\Projects\FRPG\src\FRPG\Models\ApplicationUser.cs

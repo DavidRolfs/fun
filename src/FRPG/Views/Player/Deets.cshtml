@@ -1,0 +1,17 @@
+﻿@model FRPG.Models.Player
+
+<h2> DEETS</h2>
+<hr />
+@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+
+<h3>Stats:</h3>
+<ul>
+    @foreach (var stat in Model.Stats)
+    {
+        
+        <li>Physique: @Html.DisplayFor(model => stat.Physique)</li>
+
+    }
+</ul>
+
+<p>@Html.ActionLink("Back to list view", "Index")</p>

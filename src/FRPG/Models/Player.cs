@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FRPG.Models
@@ -13,6 +14,11 @@ namespace FRPG.Models
         public byte[] ImageToByte { get; set; }
         public string Bio { get; set; }
         public int Age { get; set; }
+        public int Charm { get; set; }
+        public int Intellect { get; set; }
+        public int Wealth { get; set; }
+        public int Physique { get; set; }
+        public int Experience { get; set; }
         public virtual ApplicationUser User { get; set; }
     }
 }

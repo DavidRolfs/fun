@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using FRPG.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -67,6 +68,11 @@ namespace FRPG.Controllers
             _db.Players.Remove(thisPlayer);
             _db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public IActionResult Deets(int id)
+        {
+            var thisPlayer = _db.Players.FirstOrDefault(players => players.Id == id);
+            return View(thisPlayer);
         }
     }
 }

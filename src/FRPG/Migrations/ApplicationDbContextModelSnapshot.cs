@@ -74,13 +74,23 @@ namespace FRPG.Migrations
 
                     b.Property<string>("Bio");
 
+                    b.Property<int>("Charm");
+
+                    b.Property<int>("Experience");
+
                     b.Property<string>("ImagePath");
 
                     b.Property<byte[]>("ImageToByte");
 
+                    b.Property<int>("Intellect");
+
                     b.Property<string>("Name");
 
+                    b.Property<int>("Physique");
+
                     b.Property<string>("UserId");
+
+                    b.Property<int>("Wealth");
 
                     b.HasKey("Id");
 

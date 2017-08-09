@@ -14,8 +14,15 @@
             <li>ImageToByte: @Html.DisplayFor(modelPlayer => listItem.ImageToByte)</li>
             <li>Bio: @Html.DisplayFor(modelPlayer => listItem.Bio)</li>
             <li>Age: @Html.DisplayFor(modelPlayer => listItem.Age)</li>
+            <li>Charm: @Html.DisplayFor(modelPlayer => listItem.Charm)</li>
+            <li>Wealth: @Html.DisplayFor(modelPlayer => listItem.Wealth)</li>
+            <li>Physique: @Html.DisplayFor(modelPlayer => listItem.Physique)</li>
+            <li>Intellect: @Html.DisplayFor(modelPlayer => listItem.Intellect)</li>
+            <li>Experience: @Html.DisplayFor(modelPlayer => listItem.Experience)</li>
             <li>@Html.ActionLink("Edit", "Edit", new { id = listItem.Id })</li>
             <li>@Html.ActionLink("Delete", "Delete", new { id = listItem.Id })</li>
+            
+
         }
     </ul>
 }

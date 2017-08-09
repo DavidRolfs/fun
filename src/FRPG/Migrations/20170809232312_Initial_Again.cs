@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace FRPG.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Initial_Again : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -60,6 +60,35 @@ namespace FRPG.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUserTokens", x => new { x.UserId, x.LoginProvider, x.Name });
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Players",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Age = table.Column<int>(nullable: false),
+                    Bio = table.Column<string>(nullable: true),
+                    Charm = table.Column<int>(nullable: false),
+                    Experience = table.Column<int>(nullable: false),
+                    ImagePath = table.Column<string>(nullable: true),
+                    ImageToByte = table.Column<byte[]>(nullable: true),
+                    Intellect = table.Column<int>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
+                    Physique = table.Column<int>(nullable: false),
+                    UserId = table.Column<string>(nullable: true),
+                    Wealth = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Players", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Players_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -160,6 +189,11 @@ namespace FRPG.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Players_UserId",
+                table: "Players",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "RoleNameIndex",
                 table: "AspNetRoles",
                 column: "NormalizedName");
@@ -192,6 +226,9 @@ namespace FRPG.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Players");
+
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
