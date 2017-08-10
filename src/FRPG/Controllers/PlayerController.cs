@@ -74,5 +74,9 @@ namespace FRPG.Controllers
             var thisPlayer = _db.Players.FirstOrDefault(players => players.Id == id);
             return View(thisPlayer);
         }
+        public IActionResult Color()
+        {
+            return View();
+        }
     }
 }

@@ -71,5 +71,21 @@ namespace FRPG.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index");
         }
+        public IActionResult hidden()
+        {
+            return View();
+        }
+        public IActionResult fractal()
+        {
+            return View();
+        }
+        public IActionResult voronoi()
+        {
+            return View();
+        }
+        public IActionResult tree()
+        {
+            return View();
+        }
     }
 }
