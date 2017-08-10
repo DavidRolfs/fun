@@ -87,5 +87,9 @@ namespace FRPG.Controllers
         {
             return View();
         }
+        public IActionResult fractalTree()
+        {
+            return View();
+        }
     }
 }
